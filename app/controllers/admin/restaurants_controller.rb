@@ -2,7 +2,7 @@ class Admin::RestaurantsController < ApplicationController
 
   def index
      @restaurants = Restaurant.page(params[:page]).per(10)
-  
+     
   end
 
   before_action :authenticate_user!
